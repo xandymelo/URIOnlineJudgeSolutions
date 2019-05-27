@@ -12,6 +12,7 @@ namespace URIOnlineJudgeSolutions
             Console.WriteLine($"{litrosGastos:f3}");
             Console.ReadKey();
             
+
         }
     }
 }
