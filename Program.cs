@@ -11,7 +11,6 @@ namespace URIOnlineJudgeSolutions
             double litrosGastos = (tempoPerdido * kmHora)/12;
             Console.WriteLine($"{litrosGastos:f3}");
             Console.ReadKey();
-            
 
         }
     }
