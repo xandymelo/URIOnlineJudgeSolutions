@@ -1,0 +1,35 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+  string valores = Console.ReadLine();
+  String[] valores_separados = valores.Split(' ');
+  int codigo_do_produto = Convert.ToInt32(valores_separados[0]);
+  int quant_do_produto = Convert.ToInt32(valores_separados[1]);
+  if (codigo_do_produto == 1)
+  {
+    double valor_para_pagar = 4 * quant_do_produto;
+    Console.WriteLine($"Total: R$ {valor_para_pagar:f2}");
+  }
+  else if(codigo_do_produto == 2)
+  {
+    double valor_para_pagar = 4.5 * quant_do_produto;
+    Console.WriteLine($"Total: R$ {valor_para_pagar:f2}");
+  }
+  else if (codigo_do_produto == 3)
+  {
+    double valor_para_pagar = 5 * quant_do_produto;
+    Console.WriteLine($"Total: R$ {valor_para_pagar:f2}");
+  }
+  else if (codigo_do_produto == 4)
+  {
+    double valor_para_pagar = 2 * quant_do_produto;
+    Console.WriteLine($"Total: R$ {valor_para_pagar:f2}");
+  }
+  else if (codigo_do_produto == 5)
+  {
+    double valor_para_pagar = 1.50 * quant_do_produto;
+    Console.WriteLine($"Total: R$ {valor_para_pagar:f2}");
+  }
+  }
+}
