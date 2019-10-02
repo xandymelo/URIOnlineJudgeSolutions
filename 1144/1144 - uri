@@ -1,0 +1,15 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+  int contador = 1;
+  int numero = Convert.ToInt32(Console.ReadLine());
+  while (contador <= numero)
+  {
+      Console.WriteLine($"{contador} {contador * contador} { contador * contador * contador}");
+      Console.WriteLine($"{contador} {(contador * contador) + 1} { (contador * contador * contador) + 1}");
+      contador++;
+  }
+  }
+}
+
