@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+
+class MainClass {
+  public static void Main (string[] args) {
+  List<double> numeros = new List<double>();
+  int contador = 0;
+  for (int i = 0; i < 6;i++)
+  {
+    double numero = Convert.ToDouble(Console.ReadLine());
+    if (numero != 0)
+    {
+      numeros.Add(numero);
+    }
+
+  }
+  foreach(double elemento in numeros)
+  {
+    if (elemento > 0)
+    {
+      contador += 1;
+    }
+  }
+Console.WriteLine($"{contador} valores positivos");
+  }
+}
