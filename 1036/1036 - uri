@@ -1,0 +1,23 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+string numeros = Console.ReadLine();
+string[] numeros_separados = numeros.Split(' ');
+double A = Convert.ToDouble(numeros_separados[0]);
+double B = Convert.ToDouble(numeros_separados[1]);
+double C = Convert.ToDouble(numeros_separados[2]);
+double delta = (B * B) - (4 * A * C);
+double r1 = ((Math.Pow(delta,1/2d)) - B) / (2 * A);
+double r2 = (- (B + (Math.Pow(delta,1/2d))) / (2 * A));
+if (delta >= 0 && A != 0)
+{
+  Console.WriteLine($"R1 = {r1:f5}");
+  Console.WriteLine($"R2 = {r2:f5}");
+}
+else
+{
+  Console.WriteLine("Impossivel calcular");
+}
+  }
+}
