@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class MainClass {
+  public static void Main (string[] args) {
+  int quant_de_testes = Convert.ToInt32(Console.ReadLine());
+  IEnumerable<int> sequencia = Enumerable.Range(0,quant_de_testes);
+  foreach (int c in sequencia)
+  {
+    int numero = Convert.ToInt32(Console.ReadLine());
+    int soma = 0;
+    IEnumerable<int> sequencia2 = Enumerable.Range(1,numero - 1);
+    foreach (int i in sequencia2)
+    {
+      if (numero % i == 0)
+      {
+        soma += i;
+      }
+    }
+    if (soma == numero)
+    {
+      Console.WriteLine($"{numero} eh perfeito");
+    }
+    else
+    {
+      Console.WriteLine($"{numero} nao eh perfeito");
+    }
+  }
+  }
+  }
+
+
