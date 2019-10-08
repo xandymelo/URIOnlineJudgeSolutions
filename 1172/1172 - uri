@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using static System.Boolean;
+
+class MainClass {
+  public static void Main (string[] args) {
+  int[] vetor = new int[10];
+  IEnumerable<int> sequencia = Enumerable.Range(0,10);
+  foreach (int c in sequencia)
+  {
+    int valor = Convert.ToInt32(Console.ReadLine());
+    if (valor <= 0)
+    {
+      valor = 1;
+    }
+    vetor[c] = valor;
+  }
+  foreach (int i in sequencia)
+  {
+    Console.WriteLine($"X[{i}] = {vetor[i]}");
+  }
+  }
+  }
