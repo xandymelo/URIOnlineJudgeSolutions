@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using static System.Boolean;
+
+class MainClass {
+  public static void Main (string[] args) {
+  int quant_de_teste = Convert.ToInt32(Console.ReadLine());
+  IEnumerable<int> sequencia2 = Enumerable.Range(0,quant_de_teste);
+  foreach (int i in sequencia2)
+  {
+    int numero = Convert.ToInt32(Console.ReadLine());
+    if (primo(numero) == true)
+    {
+      Console.WriteLine($"{numero} eh primo");
+    }
+    if ( primo(numero) == false)
+    {
+      Console.WriteLine($"{numero} nao eh primo");
+    }
+  }
+  }
+  private static bool primo(int n)
+  {
+    if (n == 2)
+    {
+      return true;
+    }
+    if (n == 0 | n == 1 | (n % 2 == 0))
+    {
+      return false;
+    }
+    double divisao = (Math.Sqrt(n)) + 1;
+    int limite = Convert.ToInt32(divisao);
+    IEnumerable<int> sequencia = Enumerable.Range(3,limite);
+    foreach (int c in sequencia)
+    {
+      if (n % c == 0 & n != c)
+      {
+        return false;
+      }
+    }
+    return true;
+  }
+  }
