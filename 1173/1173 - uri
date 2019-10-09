@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using static System.Boolean;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int vetor = Convert.ToInt32(Console.ReadLine());
+    IEnumerable<int> sequencia = Enumerable.Range(0,10);
+    foreach (int c in sequencia)
+    {
+      Console.WriteLine($"N[{c}] = {vetor}");
+      vetor = vetor * 2;
+    }
+  
+  }
+  }
