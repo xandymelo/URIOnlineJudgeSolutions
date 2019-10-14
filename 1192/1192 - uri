@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using static System.Boolean;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int quant_de_testes = Convert.ToInt32(Console.ReadLine());
+    IEnumerable<int> sequencia = Enumerable.Range(0,quant_de_testes);
+    foreach (int c in sequencia)
+    {
+      string entrada = Console.ReadLine();
+      int digito1 = Convert.ToInt32(Convert.ToString(entrada[0]));
+      char letra1 = entrada[1];
+      int digito2 = Convert.ToInt32(Convert.ToString(entrada[2]));
+      if (digito1 == digito2)
+      {
+        Console.WriteLine(digito1 * digito2);
+      }
+      else if (Char.IsUpper(letra1))
+      {
+        Console.WriteLine(digito2 - digito1);
+      }
+      else if (Char.IsLower(letra1))
+      {
+        Console.WriteLine(digito1 + digito2);
+      }
+    }
+  }
+  }
