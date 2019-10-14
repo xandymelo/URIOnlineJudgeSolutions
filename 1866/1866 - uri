@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using static System.Boolean;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int quant_de_testes = Convert.ToInt32(Console.ReadLine());
+    IEnumerable<int> sequencia = Enumerable.Range(0,quant_de_testes);
+    foreach (int c in sequencia)
+    {
+      int numero = Convert.ToInt32(Console.ReadLine());
+      if (numero % 2 == 0)
+      {
+        Console.WriteLine(0);
+      }
+      if (numero % 2 == 1)
+      {
+        Console.WriteLine(1);
+      }
+    } 
+  }
+  }
