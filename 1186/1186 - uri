@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using static System.Boolean;
+
+class MainClass {
+  public static void Main (string[] args) {
+    string soma_ou_media = Console.ReadLine();
+    double soma = 0;
+    IEnumerable<int> sequencia = Enumerable.Range(0,12);
+    foreach (int i in sequencia)
+    {
+      foreach (int j in sequencia)
+      {
+        double elem = Convert.ToDouble(Console.ReadLine());
+        if (i + j >= 12)
+        {
+          soma += elem;
+        }
+
+      }
+    }
+    double media = soma / 66;
+    if (soma_ou_media == "S")
+    {
+      Console.WriteLine(soma.ToString("F1"));
+    }
+    if (soma_ou_media == "M")
+    {
+      Console.WriteLine(media.ToString("F1"));
+    }
+  }
+  }
