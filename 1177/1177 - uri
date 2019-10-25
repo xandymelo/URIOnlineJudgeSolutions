@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using static System.Boolean;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int valor = Convert.ToInt32(Console.ReadLine());
+    int contagem = 0;
+    IEnumerable<int> sequencia = Enumerable.Range(0,1000);
+    foreach (int c in sequencia)
+    {
+      Console.WriteLine($"N[{c}] = {contagem}");
+      contagem += 1;
+      if (contagem == valor)
+      {
+        contagem = 0;
+      }
+    }
+  }
+  }
